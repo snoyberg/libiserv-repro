@@ -1,24 +1,24 @@
 + for exe in stack stack2 stack21 stack1
 + git clean -fdx
-Removing .package.yaml.swp
-Removing .stack-work/
-Removing .stack.yaml.swp
-Removing foo.cabal
-Removing stack.yaml.lock
 + echo stack
 stack
 + stack --version
 Version 2.3.0.2, Git revision 42aff5af58a0b3d39900c889e7c9e92e6a37be7a (dirty) (8093 commits) RELEASE-CANDIDATE x86_64 hpack-0.33.0
 + stack build
-foo> configure (lib)
-Configuring foo-0...
-foo> build (lib)
-Preprocessing library for foo-0..
-Building library for foo-0..
-[1 of 1] Compiling Paths_foo
-foo> copy/register
-Installing library in /home/michael/Desktop/tmp/.stack-work/install/x86_64-linux/f5586984c679fe225193c9429b6d4a9c815d59efa49ea1346525d88f731af2e8/8.8.3/lib/x86_64-linux-ghc-8.8.3/foo-0-Dkj8FS24m3eJcpOjtObv4E
-Registering library for foo-0..
+
+Error: While constructing the build plan, the following exceptions were encountered:
+
+In the dependencies for foo-0:
+    libiserv needed, but the stack configuration has no specified version (no package with that name
+             found, perhaps there is a typo in a package's build-depends or an omission from the
+             stack.yaml packages list?)
+needed since foo is a build target.
+
+Some different approaches to resolving this:
+
+
+Plan construction failed.
++ true
 + for exe in stack stack2 stack21 stack1
 + git clean -fdx
 Removing .stack-work/
@@ -29,15 +29,20 @@ stack2
 + stack2 --version
 Version 2.2.0, Git revision 246e15bf841b451ea9285733b537a6f687a2095e (dirty) (8036 commits) PRE-RELEASE x86_64 hpack-0.33.0
 + stack2 build
-foo> configure (lib)
-Configuring foo-0...
-foo> build (lib)
-Preprocessing library for foo-0..
-Building library for foo-0..
-[1 of 1] Compiling Paths_foo
-foo> copy/register
-Installing library in /home/michael/Desktop/tmp/.stack-work/install/x86_64-linux/f5586984c679fe225193c9429b6d4a9c815d59efa49ea1346525d88f731af2e8/8.8.3/lib/x86_64-linux-ghc-8.8.3/foo-0-Dkj8FS24m3eJcpOjtObv4E
-Registering library for foo-0..
+
+Error: While constructing the build plan, the following exceptions were encountered:
+
+In the dependencies for foo-0:
+    libiserv needed, but the stack configuration has no specified version (no package with that name
+             found, perhaps there is a typo in a package's build-depends or an omission from the
+             stack.yaml packages list?)
+needed since foo is a build target.
+
+Some different approaches to resolving this:
+
+
+Plan construction failed.
++ true
 + for exe in stack stack2 stack21 stack1
 + git clean -fdx
 Removing .stack-work/
@@ -48,17 +53,20 @@ stack21
 + stack21 --version
 Version 2.1.3, Git revision 636e3a759d51127df2b62f90772def126cdf6d1f (7735 commits) x86_64 hpack-0.31.2
 + stack21 build
-Stack has not been tested with GHC versions above 8.6, and using 8.8.3, this may fail
-Stack has not been tested with Cabal versions above 2.4, but version 3.0.1.0 was found, this may fail
-foo> configure (lib)
-Configuring foo-0...
-foo> build (lib)
-Preprocessing library for foo-0..
-Building library for foo-0..
-[1 of 1] Compiling Paths_foo
-foo> copy/register
-Installing library in /home/michael/Desktop/tmp/.stack-work/install/x86_64-linux/f5586984c679fe225193c9429b6d4a9c815d59efa49ea1346525d88f731af2e8/8.8.3/lib/x86_64-linux-ghc-8.8.3/foo-0-Dkj8FS24m3eJcpOjtObv4E
-Registering library for foo-0..
+
+Error: While constructing the build plan, the following exceptions were encountered:
+
+In the dependencies for foo-0:
+    libiserv needed, but the stack configuration has no specified version (no package with that name
+             found, perhaps there is a typo in a package's build-depends or an omission from the
+             stack.yaml packages list?)
+needed since foo is a build target.
+
+Some different approaches to resolving this:
+
+
+Plan construction failed.
++ true
 + for exe in stack stack2 stack21 stack1
 + git clean -fdx
 Removing .stack-work/
@@ -69,12 +77,16 @@ stack1
 + stack1 --version
 Version 1.9.3, Git revision 40cf7b37526b86d1676da82167ea8758a854953b (6211 commits) x86_64 hpack-0.31.1
 + stack1 build
-Didn't see libiserv-8.8.3 in your package indices.
+Didn't see libiserv-8.6.3 in your package indices.
 Updating and trying again.
 Updating package index Hackage (mirrored at https://s3.amazonaws.com/hackage.fpcomplete.com/) ...
 Selected mirror https://s3.amazonaws.com/hackage.fpcomplete.com/
 Downloading timestamp
-No updates to your package index were found
+Downloading snapshot
+Updating index
+Updated package index downloaded
 Update complete
-The following package identifiers were not found in your indices: libiserv-8.8.3
+Populating index cache ...
+Populated index cache.
+The following package identifiers were not found in your indices: libiserv-8.6.3
 + true
